@@ -1,7 +1,7 @@
 /**
- * Ostsee Bahnreise Dashboard - Main Application
+ * Stations of Sun - Main Application
  */
-class OstseeBahnApp {
+class StationsOfSunApp {
   /**
    * Initialize the application
    */
@@ -310,7 +310,7 @@ class OstseeBahnApp {
       <div class="install-content">
         <div class="install-icon">📱</div>
         <div class="install-text">
-          <strong>Ostsee Bahnreise als App installieren</strong>
+          <strong>Stations of Sun als App installieren</strong>
           <span>Für schnelleren Zugriff und bessere Offline-Funktionalität</span>
         </div>
       </div>
@@ -523,5 +523,5 @@ class OstseeBahnApp {
 
 // Initialize the app when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
-  window.app = new OstseeBahnApp();
+  window.app = new StationsOfSunApp();
 });

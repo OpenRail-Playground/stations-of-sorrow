@@ -110,6 +110,11 @@ html, body {
   align-items: center;
 }
 
+.header__logo {
+  height: 32px;
+  margin-right: var(--space-md);
+}
+
 .header__title {
   font-size: var(--font-size-xl);
   font-weight: 600;

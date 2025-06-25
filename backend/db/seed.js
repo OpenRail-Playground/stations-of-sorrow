@@ -32,15 +32,6 @@ const { pool } = require('../config/db'); // We're keeping this reference for co
         connections: ["RE9", "RB23"]
       },
       {
-        id: 'westerland',
-        name: 'Westerland (Sylt)',
-        coordinates: { lat: 54.9038, lng: 8.3206 },
-        beachDistance: 800,
-        platforms: 4,
-        accessible: true,
-        connections: ["RE6", "RB61"]
-      },
-      {
         id: 'travemuende',
         name: 'Travemünde Strand',
         coordinates: { lat: 53.9583, lng: 10.8708 },

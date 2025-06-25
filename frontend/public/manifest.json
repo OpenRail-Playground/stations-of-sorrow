@@ -1,7 +1,7 @@
 {
-  "name": "Ostsee Bahnreise Dashboard",
-  "short_name": "Ostsee Bahn",
-  "description": "Intelligentes Dashboard für Ostsee-Bahnreisen mit Echtzeit-Auslastung",
+  "name": "Stations of Sun",
+  "short_name": "Sun Stations",
+  "description": "Intelligentes Dashboard für Ostsee-Bahnreisen mit Echtzeit-Bahnhofsauslastung",
   "start_url": "/index.html",
   "id": "stations-of-sun-app-1",
   "display": "standalone",
