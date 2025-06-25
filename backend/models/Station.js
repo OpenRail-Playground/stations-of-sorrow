@@ -104,33 +104,28 @@ class Station {
    */
   static async findNear(lng, lat, radiusKm, options = {}) {
     try {
+      // Simplified distance calculation for SQLite
+      // Using the Haversine formula approximation directly in SQL
       let query = `
         SELECT 
           pm.id,
           pm.name,
-          ST_X(pm.coordinates::geometry) as lng,
-          ST_Y(pm.coordinates::geometry) as lat,
-          ST_Distance(
-            ST_Transform(pm.coordinates, 3857),
-            ST_Transform(ST_SetSRID(ST_MakePoint($1, $2), 4326), 3857)
-          ) / 1000 as distance_km,
+          pm.lng,
+          pm.lat,
+          (6371 * acos(cos(radians(?)) * cos(radians(pm.lat)) * cos(radians(pm.lng) - radians(?)) + sin(radians(?)) * sin(radians(pm.lat)))) AS distance_km,
           pm.beach_distance,
           pm.platforms,
           pm.accessible,
           pm.connections
         FROM pax_masterdata pm
-        WHERE ST_DWithin(
-          ST_Transform(pm.coordinates, 3857),
-          ST_Transform(ST_SetSRID(ST_MakePoint($1, $2), 4326), 3857),
-          $3 * 1000
-        )
+        WHERE (6371 * acos(cos(radians(?)) * cos(radians(pm.lat)) * cos(radians(pm.lng) - radians(?)) + sin(radians(?)) * sin(radians(pm.lat)))) < ?
       `;
 
       // Add additional filters based on options
-      const params = [lng, lat, radiusKm];
+      const params = [lat, lng, lat, lat, lng, lat, radiusKm];
       
       if (options.requireAccessible) {
-        query += ` AND pm.accessible = true`;
+        query += ` AND pm.accessible = 1`; // SQLite uses 1/0 for boolean
       }
       
       // Order by distance

@@ -31,10 +31,10 @@
   --color-db-red-light: #FF8D8D;
   
   /* Occupancy Colors */
-  --color-occupancy-low: #4CAF50;
-  --color-occupancy-medium: #FF9800;
-  --color-occupancy-high: #FF5722;
-  --color-occupancy-very-high: #F44336;
+  --color-occupancy-low: #00C853;
+  --color-occupancy-medium: #FFD600;
+  --color-occupancy-high: #FF6D00;
+  --color-occupancy-very-high: #D50000;
   
   /* Typography */
   --font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -225,6 +225,20 @@ html, body {
   font-size: var(--font-size-sm);
   text-align: center;
   z-index: 10;
+}
+
+/* Map Legend Styles */
+.legend {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-sm);
+  line-height: 1.4;
+}
+
+.legend strong {
+  display: block;
+  margin-bottom: var(--space-xs);
+  color: var(--color-text);
+  font-weight: 600;
 }
 
 /* Occupancy List */

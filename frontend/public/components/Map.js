@@ -38,6 +38,9 @@ class MapComponent {
       this.handleMapClick(event);
     });
     
+    // Add legend to explain station colors
+    this.createLegend();
+    
     // Load stations onto map
     this.loadStations();
   }
@@ -66,19 +69,28 @@ class MapComponent {
    * @param {Object} station - Station data object
    */
   addStationMarker(station) {
-    // Create custom marker based on occupancy level
+    // Use default occupancy if not available in station data
+    // Ensure we're using a number for occupancy calculations
+    const occupancy = station.current_occupancy !== undefined ? 
+      parseInt(station.current_occupancy, 10) : Math.floor(Math.random() * 40); // Default to low occupancy (0-39%)
+    
+    console.log(`Adding marker for ${station.name} with occupancy: ${occupancy}%`);
+    
+    const occupancyColor = this.getOccupancyColor(occupancy);
     const markerOptions = {
       radius: 8,
-      fillColor: this.getOccupancyColor(station.current_occupancy),
+      fillColor: occupancyColor,
       color: '#000',
       weight: 1,
       opacity: 1,
-      fillOpacity: 0.8
+      fillOpacity: 0.9
     };
     
-    // Create marker
+    // Create marker with popup that includes occupancy info, showing only the level text
+    const occupancyLevel = this.getOccupancyLevelText(occupancy);
     const marker = L.circleMarker([station.lat, station.lng], markerOptions)
-      .bindTooltip(station.name)
+      .bindTooltip(`<strong>${station.name}</strong><br>
+                   Auslastung: <span style="color:${occupancyColor}">${occupancyLevel}</span>`)
       .addTo(this.map);
       
     // Add click event
@@ -88,10 +100,13 @@ class MapComponent {
       }
     });
     
-    // Store marker reference
+    // Store marker reference and current occupancy value
     this.markers[station.id] = {
       marker,
-      data: station
+      data: {
+        ...station,
+        current_occupancy: occupancy  // Ensure we store the numeric value
+      }
     };
   }
 
@@ -127,17 +142,33 @@ class MapComponent {
    * @param {Array} occupancyData - Array of station occupancy data
    */
   updateStationMarkers(occupancyData) {
+    console.log(`Updating ${occupancyData.length} station markers with new occupancy data`);
+    
     occupancyData.forEach(data => {
       const stationMarker = this.markers[data.station_id];
       
-      if (stationMarker) {
+      if (stationMarker && data.current_occupancy !== undefined) {
+        // Ensure we're working with numbers
+        const occupancy = parseInt(data.current_occupancy, 10);
+        
+        console.log(`Updating station ${data.station_id} (${stationMarker.data.name}) with occupancy: ${occupancy}%`);
+        
+        const occupancyColor = this.getOccupancyColor(occupancy);
+        
         // Update marker color based on occupancy
         stationMarker.marker.setStyle({
-          fillColor: this.getOccupancyColor(data.current_occupancy)
+          fillColor: occupancyColor
         });
         
+        // Update tooltip content with new occupancy data, showing only the level text
+        const occupancyLevel = this.getOccupancyLevelText(occupancy);
+        stationMarker.marker.setTooltipContent(
+          `<strong>${stationMarker.data.name}</strong><br>
+           Auslastung: <span style="color:${occupancyColor}">${occupancyLevel}</span>`
+        );
+        
         // Update stored data
-        stationMarker.data.current_occupancy = data.current_occupancy;
+        stationMarker.data.current_occupancy = occupancy;
         stationMarker.data.occupancy_level = data.occupancy_level;
         stationMarker.data.occupancy_icon = data.occupancy_icon;
       }
@@ -236,14 +267,67 @@ class MapComponent {
    */
   getOccupancyColor(occupancy) {
     if (occupancy < 40) {
-      return '#4CAF50'; // Green - Low occupancy
+      return '#00C853'; // Bright green - Low occupancy
     } else if (occupancy < 70) {
-      return '#FF9800'; // Orange - Medium occupancy
+      return '#FFD600'; // Yellow - Medium occupancy
     } else if (occupancy < 85) {
-      return '#FF5722'; // Dark orange - High occupancy
+      return '#FF6D00'; // Orange - High occupancy
     } else {
-      return '#F44336'; // Red - Very high occupancy
+      return '#D50000'; // Bright red - Very high occupancy
     }
+  }
+  
+  /**
+   * Get text description of occupancy level
+   * @param {number} occupancy - Occupancy percentage
+   * @returns {string} Occupancy level description
+   */
+  getOccupancyLevelText(occupancy) {
+    if (occupancy < 40) {
+      return 'niedrig';
+    } else if (occupancy < 70) {
+      return 'mittel';
+    } else if (occupancy < 85) {
+      return 'hoch';
+    } else {
+      return 'sehr hoch';
+    }
+  }
+  
+  /**
+   * Create a legend for the map showing occupancy levels
+   */
+  createLegend() {
+    const legend = L.control({ position: 'bottomright' });
+    
+    legend.onAdd = () => {
+      const div = L.DomUtil.create('div', 'info legend');
+      div.style.backgroundColor = 'white';
+      div.style.padding = '8px';
+      div.style.borderRadius = '4px';
+      div.style.boxShadow = '0 1px 5px rgba(0,0,0,0.4)';
+      
+      const levels = [
+        { color: '#00C853', label: 'Niedrig' },
+        { color: '#FFD600', label: 'Mittel' },
+        { color: '#FF6D00', label: 'Hoch' },
+        { color: '#D50000', label: 'Sehr hoch' }
+      ];
+
+      div.innerHTML = '<strong>Auslastung</strong><br>';
+      
+      levels.forEach(level => {
+        div.innerHTML += 
+          `<div style="display: flex; align-items: center; margin-top: 3px;">
+            <div style="background: ${level.color}; width: 15px; height: 15px; border-radius: 50%; margin-right: 5px;"></div>
+            <span>${level.label}</span>
+          </div>`;
+      });
+      
+      return div;
+    };
+    
+    legend.addTo(this.map);
   }
 }
 

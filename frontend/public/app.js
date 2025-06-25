@@ -156,6 +156,38 @@ class StationsOfSunApp {
     
     // Initialize WebSocket
     this.apiService.initWebSocket();
+    
+    // Load initial occupancy data
+    this.loadOccupancyData();
+    
+    // Set up periodic refresh for occupancy data every 1 minute
+    setInterval(() => {
+      this.loadOccupancyData();
+    }, 60000); // 60000 ms = 1 minute
+  }
+  
+  /**
+   * Load and update station occupancy data
+   */
+  async loadOccupancyData() {
+    try {
+      console.log('Loading occupancy data...');
+      const response = await this.apiService.getCurrentOccupancy();
+      
+      if (response.success) {
+        console.log('Updating occupancy data for', response.data.length, 'stations');
+        // Debug the occupancy data we got
+        response.data.forEach(station => {
+          console.log(`Station ${station.station_id}: ${station.name}, Occupancy: ${station.current_occupancy}`);
+        });
+        
+        this.mapComponent.updateStationMarkers(response.data);
+      } else {
+        console.error('Failed to load occupancy data:', response.error);
+      }
+    } catch (error) {
+      console.error('Error loading occupancy data:', error);
+    }
   }
 
   /**

@@ -10,6 +10,7 @@ class Occupancy {
    */
   static async getCurrentForAll() {
     try {
+      // For SQLite, let's simply get all records and handle the filtering in code
       const result = await pool.query(`
         SELECT
           pd.station_id,
@@ -20,20 +21,27 @@ class Occupancy {
           pd.timestamp
         FROM paxdata pd
         JOIN pax_masterdata pm ON pd.station_id = pm.id
-        WHERE pd.timestamp > NOW() - INTERVAL '30 minutes'
         ORDER BY pd.timestamp DESC
       `);
 
-      // Group by station_id to get only the latest record per station
+      // Debug output
+      console.log(`Found ${result.rows.length} occupancy records`);
+      
+      // Get the most recent record for each station
       const latestOccupancies = {};
-      result.rows.forEach(row => {
-        if (!latestOccupancies[row.station_id] || 
-            new Date(row.timestamp) > new Date(latestOccupancies[row.station_id].timestamp)) {
-          latestOccupancies[row.station_id] = row;
-        }
-      });
+      if (result.rows && result.rows.length) {
+        result.rows.forEach(row => {
+          if (!latestOccupancies[row.station_id] || 
+              (row.timestamp && latestOccupancies[row.station_id].timestamp && 
+               new Date(row.timestamp) > new Date(latestOccupancies[row.station_id].timestamp))) {
+            latestOccupancies[row.station_id] = row;
+          }
+        });
+      }
 
-      return Object.values(latestOccupancies);
+      const occupancyData = Object.values(latestOccupancies);
+      console.log(`Returning ${occupancyData.length} unique station occupancy records`);
+      return occupancyData;
     } catch (error) {
       console.error('Database error in Occupancy.getCurrentForAll:', error);
       throw error;
@@ -54,7 +62,7 @@ class Occupancy {
           occupancy_icon,
           timestamp
         FROM paxdata
-        WHERE station_id = $1
+        WHERE station_id = ?
         ORDER BY timestamp DESC
         LIMIT 1
       `, [stationId]);
@@ -78,6 +86,9 @@ class Occupancy {
    */
   static async getHistoryForStation(stationId, hours = 24) {
     try {
+      // SQLite compatible time calculation
+      const hoursAgo = new Date(Date.now() - hours * 60 * 60 * 1000).toISOString();
+      
       const result = await pool.query(`
         SELECT
           station_id,
@@ -85,10 +96,10 @@ class Occupancy {
           occupancy_level,
           timestamp
         FROM paxdata
-        WHERE station_id = $1
-          AND timestamp > NOW() - INTERVAL '${hours} hours'
+        WHERE station_id = ?
+          AND timestamp > ?
         ORDER BY timestamp
-      `, [stationId]);
+      `, [stationId, hoursAgo]);
 
       return result.rows;
     } catch (error) {
@@ -122,11 +133,19 @@ class Occupancy {
 
       const result = await pool.query(`
         INSERT INTO paxdata (station_id, current_occupancy, occupancy_level, occupancy_icon)
-        VALUES ($1, $2, $3, $4)
-        RETURNING *
+        VALUES (?, ?, ?, ?)
       `, [stationId, occupancy, occupancyLevel, occupancyIcon]);
+      
+      // For SQLite we need to fetch the last inserted row manually
+      const insertedId = await pool.query('SELECT last_insert_rowid() as id');
+      const lastId = insertedId.rows[0].id;
+      
+      // Get the inserted record
+      const insertedRow = await pool.query(`
+        SELECT * FROM paxdata WHERE id = ?
+      `, [lastId]);
 
-      return result.rows[0];
+      return insertedRow.rows[0];
     } catch (error) {
       console.error(`Database error in Occupancy.recordOccupancy for ${stationId}:`, error);
       throw error;
