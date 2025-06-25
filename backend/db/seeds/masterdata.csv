@@ -1,0 +1,106 @@
+pax_counter_id,equipmentname,station_id,tplnr,tpname,station_name,station_ril100,management_name,region_name,federal_state_name,station_longitude,station_latitude,produktlinie,untersegment
+244cab034443,DSA+_Typ3_GL12_WAF12,79,00079-01-B01,Bahnsteig 01,Altefähr,WAF,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,13.14101,54.322927,Zubringerbahnhof,ländlicher Zubringer
+244cab067843,DSA+_Typ2_GL1_WAH1,121,00121-01-B01,Bahnsteig 01,Althof,WAH,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.922341,54.090442,Zubringerbahnhof,ländlicher Zubringer
+a0a3b3311b9f,DSA+_Typ2_GL1_WBE12,490,00490-30,Zuwegung,Bentwisch,WBE,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.210506,54.117193,Zubringerbahnhof,ländlicher Zubringer
+244cab03327b,DSA+_Typ2_GL1_WBO1,719,00719-01-B01,Bahnsteig 01,Bobitz,WBO,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.3628,53.804534,Zubringerbahnhof,ländlicher Zubringer
+083af23fd0df,DSA+_Typ2_GL2_WBO2,719,00719-01-B02,Bahnsteig 02,Bobitz,WBO,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.3628,53.804534,Zubringerbahnhof,ländlicher Zubringer
+244cab020efb,DSA+_Typ2_GL2_WBZ2,758,00758-01-B02,Bahnsteig 02,Boizenburg (Elbe),WBZ,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,10.754481,53.378069,Zubringerbahnhof,ländlicher Zubringer
+e831cdc25807,DSA+_Typ2_GL1_WBZ1,758,00758-01-B01,Bahnsteig 01,Boizenburg (Elbe),WBZ,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,10.754481,53.378069,Zubringerbahnhof,ländlicher Zubringer
+244cab02fcff,DSA+_Typ2_GL1_WBTF1,892,00892-01-B01,Bahnsteig 01,Broderstorf,WBTF,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.262763,54.078916,Zubringerbahnhof,ländlicher Zubringer
+a0a3b330e483,DSA+_Typ2_GL1_WCA1,1027,01027-01-B01,Bahnsteig 01,Cammin (Meckl),WCA,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,13.299645,53.439035,Zubringerbahnhof,ländlicher Zubringer
+244cab03ce33,DSA+_Typ3_GL1/2_WCZ12,1086,01086-01-B02,Bahnsteig 01/02,Crivitz,WCZ,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.645071,53.572518,Zubringerbahnhof,ländlicher Zubringer
+244cab06fb47,DSA+_Typ2_GL1_WDS1,1263,01263-01-B01,Bahnsteig 01,Domsühl,WDS,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.765869,53.485372,Zubringerbahnhof,ländlicher Zubringer
+34ab954069df,DSA+_Typ2_GL2_WMK2,4019,04019-01-B02,Bahnsteig 02,Dorf Mecklenburg,WMK,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.471343,53.842932,Zubringerbahnhof,ländlicher Zubringer
+244cab068b4f,DSA+_Typ2_GL1_WMK1,4019,04019-01-B01,Bahnsteig 01,Dorf Mecklenburg,WMK,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.471343,53.842932,Zubringerbahnhof,ländlicher Zubringer
+244cab0161bb,DSA+_Typ2_GL1_WEGS1,1476,01476-01-B01,Bahnsteig 01,Eggesin,WEGS,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,14.073046,53.681825,Zubringerbahnhof,ländlicher Zubringer
+1097bdd7722b,DSA+_Typ2_GL1_WFRR1,1951,01951-01-B01,Bahnsteig 01,Friedrichsruhe (Meckl),WFRR,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.739088,53.524802,Zubringerbahnhof,ländlicher Zubringer
+244cab0700ef,DSA+_Typ2_GL1_WGA1,1994,01994-01-B01,Bahnsteig 01,Gadebusch,WGA,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.121485,53.704066,Zubringerbahnhof,ländlicher Zubringer
+244cab03544b,DSA+_Typ2_GL1_WGE1,2049,02049-01-B01,Bahnsteig 01,Gelbensande,WGE,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.304809,54.198696,Zubringerbahnhof,ländlicher Zubringer
+244cab0468b7,DSA+_Typ2_Gl1_WGNV1,2153,02153-01-B01,Bahnsteig 01,Gnevkow,WGNV,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,13.17467,53.792896,Zubringerbahnhof,ländlicher Zubringer
+244cab039c97,DSA+_Typ2_GL1_WGM1,4812,04812-01-B01,Bahnsteig 01,Graal-Müritz,WGM,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.245387,54.248777,Zubringerbahnhof,ländlicher Zubringer
+a0a3b32f82e7,DSA+_Typ2_GL1_WGMW1,8141,08141-01-B01,Bahnsteig 01,Graal-Müritz-Koppelweg,WGMW,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.237167,54.24589,Zubringerbahnhof,ländlicher Zubringer
+244cab06feab,DSA+_Typ2_GL2_WGRB2,2225,02225-01-B02,Bahnsteig 02,Grabow (Meckl),WGRB,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.564201,53.282902,Zubringerbahnhof,ländlicher Zubringer
+e831cdc25893,DSA+_Typ2_GL1_WGRB1,2225,02225-01-B01,Bahnsteig 01,Grabow (Meckl),WGRB,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.564201,53.282902,Zubringerbahnhof,ländlicher Zubringer
+244cab03d43f,DSA+_Typ2_GL1_WGBN1,2267,02267-01-B01,Bahnsteig 01,Grieben (Meckl),WGBN,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.068569,53.851233,Zubringerbahnhof,ländlicher Zubringer
+d48afc8ed833,DSA+_Typ2_Gl.2_WGB2,2295,02295-01-B02,Bahnsteig 02,Groß Brütz,WGB,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.251439,53.653088,Zubringerbahnhof,ländlicher Zubringer
+a0a3b32fac63,DSA+_Typ2_GL1_WGB1,2295,02295-01-B01,Bahnsteig 01,Groß Brütz,WGB,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.251439,53.653088,Zubringerbahnhof,ländlicher Zubringer
+244cab022f13,DSA+_Typ2_GL1_WGLI1,2311,02311-01-B01,Bahnsteig 01,Groß Lüsewitz,WGLI,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.339221,54.073407,Zubringerbahnhof,ländlicher Zubringer
+083af23ff6e7,DSA+_Typ2_GL3_WHL3,2468,02468-01-B03,Bahnsteig 03,Hagenow Land,WHL,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.215695,53.413582,Zubringerbahnhof,ländlicher Zubringer
+3494545a2a2b,DSA+_Typ2_GL2_WHL12,2468,02468-01-B02,Bahnsteig 02,Hagenow Land,WHL,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.215695,53.413582,Zubringerbahnhof,ländlicher Zubringer
+d48afc8ec603,DSA+_Typ2_GL1_WHB1,2730,02730-01-B01,Bahnsteig 01,Herrnburg,WHB,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,10.760008,53.837707,Zubringerbahnhof,ländlicher Zubringer
+d48afc8efb9f,DSA+_Typ2_GL2_WHB2,2730,02730-01-B02,Bahnsteig 02,Herrnburg,WHB,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,10.760008,53.837707,Zubringerbahnhof,ländlicher Zubringer
+a0a3b38c5463,DSA+_Typ2_GL3_WHO3,2877,02877-01-B02,Bahnsteig 02/03,Holthusen,WHO,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.364809,53.555831,Zubringerbahnhof,ländlicher Zubringer
+a0a3b32f53fb,DSA+_Typ2_GL2_WHO2,2877,02877-01-B02,Bahnsteig 02/03,Holthusen,WHO,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.364809,53.555831,Zubringerbahnhof,ländlicher Zubringer
+3494545a2107,DSA+_Typ2_GL1_WHO1,2877,02877-01-B01,Bahnsteig 01,Holthusen,WHO,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.364809,53.555831,Zubringerbahnhof,ländlicher Zubringer
+244cab00b52b,DSA+_Typ3_GL1_WKV1,3146,03146-01-B01,Bahnsteig 01,Kavelstorf,WKV,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.197821,54.007081,Zubringerbahnhof,ländlicher Zubringer
+244cab06275b,DSA+_Typ2_GL1_WKRP1,3429,03429-01-B01,Bahnsteig 01,Kronskamp,WKRP,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.315387,53.933556,Zubringerbahnhof,ländlicher Zubringer
+244cab06fe0f,DSA+_Typ2_GL2_WKRP2,3429,03429-01-B02,Bahnsteig 02,Kronskamp,WKRP,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.315387,53.933556,Zubringerbahnhof,ländlicher Zubringer
+244cab01f99f,DSA+_Typ2_GL1_WLA1,3485,03485-01-B01,Bahnsteig 01,Laage (Meckl),WLA,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.339608,53.919599,Zubringerbahnhof,ländlicher Zubringer
+244cab02113b,DSA+_Typ2_GL1_WLAK12,3503,03503-01-B01,Bahnsteig 01,Lancken,WLAK,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,13.607885,54.518032,Zubringerbahnhof,ländlicher Zubringer
+a0a3b32f794b,DSA+_Typ2_GL1_WLG1,3559,03559-01-B01,Bahnsteig 01,Langhagen,WLG,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.425217,53.680936,Zubringerbahnhof,ländlicher Zubringer
+244cab03c4df,DSA+_Typ2_GL2_WLG2,3559,03559-01-B02,Bahnsteig 02,Langhagen,WLG,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.425217,53.680936,Zubringerbahnhof,ländlicher Zubringer
+34ab954069ab,DSA+_Typ3_GL1/2_WLI0,3716,03716-30-ZUW,Zuwegung,Lietzow (Rügen),WLI,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,13.510002,54.480965,Zubringerbahnhof,Regionaler Zubringer
+244cab01f957,DSA+_Typ3_GL1/2_WLI12,3716,03716-01-B01,Bahnsteig 01/02,Lietzow (Rügen),WLI,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,13.510002,54.480965,Zubringerbahnhof,Regionaler Zubringer
+a0a3b38c58c7,DSA+_Typ2_GL1_WLF1,3830,03830-01-B01,Bahnsteig 01,Lüdersdorf (Meckl),WLF,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,10.815143,53.832924,Zubringerbahnhof,ländlicher Zubringer
+e831cdc2581f,DSA+_Typ2_GL1_WLW1,3861,03861-01-B01,Bahnsteig 01,Lüssow (Meckl),WLW,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.13786,53.843724,Zubringerbahnhof,ländlicher Zubringer
+c45bbe932723,DSA+_Typ2_GL1_WLTW1,3876,03876-01-B01,Bahnsteig 01,Lützow,WLTW,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.18043,53.655968,Zubringerbahnhof,ländlicher Zubringer
+244cab01fa4b,DSA+_Typ2_GL1_WMIS1,4124,04124-01-B01,Bahnsteig 01,Mistorf,WMIS,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.123044,53.880497,Zubringerbahnhof,ländlicher Zubringer
+a0a3b38c5997,DSA+_Typ2_GL1 _WMOI1,4155,04155-01-B01,Bahnsteig 01,Moidentin,WMOI,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.481918,53.806071,Zubringerbahnhof,ländlicher Zubringer
+244cab02425b,DSA+_Typ2_GL1_WMOE1,4160,04160-01-B01,Bahnsteig 01,Mölln (Meckl),WMOE,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,13.084507,53.585939,Zubringerbahnhof,ländlicher Zubringer
+244cab062a1b,DSA+_Typ2_GL1_WMN1,4166,04166-01-B01,Bahnsteig 01,Mönchhagen,WMN,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.225336,54.14357,Zubringerbahnhof,ländlicher Zubringer
+244cab0712df,DSA+_Typ2_GL1_WNWO1,4358,04358-01-B01,Bahnsteig 01,Neu Wokern,WNWO,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.500916,53.760033,Zubringerbahnhof,ländlicher Zubringer
+244cab01f457,DSA+_Typ2_GL1/2_WNG12,4457,04457-01-B01,Bahnsteig 01/02,Neustadt-Glewe,WNG,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.593779,53.37764,Zubringerbahnhof,ländlicher Zubringer
+3494545a213b,DSA+_Typ2_GL3_WPM3,4864,04864-01-B02,Bahnsteig 02/03,Parchim,WPM,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.831265,53.43032,Zubringerbahnhof,ländlicher Zubringer
+e831cdc26497,DSA+_Typ2_GL2_WPM2,4864,04864-01-B02,Bahnsteig 02/03,Parchim,WPM,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.831265,53.43032,Zubringerbahnhof,ländlicher Zubringer
+244cab02a57f,DSA+_Typ2_GL1_WPM1,4864,04864-01-B01,Bahnsteig 01,Parchim,WPM,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.831265,53.43032,Zubringerbahnhof,ländlicher Zubringer
+244cab021587,DSA+_Typ2_GL1_WPA1,4866,04866-01-B01,Bahnsteig 01,Parkentin,WPA,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.978983,54.081256,Zubringerbahnhof,ländlicher Zubringer
+3494545a2a1f,DSA+_Typ2_GL1_WPLM1,4951,04951-01-B01,Bahnsteig 01,Plate (Meckl),WPLM,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.507024,53.553205,Zubringerbahnhof,ländlicher Zubringer
+e831cdc25877,DSA+_Typ2_GL2_WPLM2,4951,04951-01-B02,Bahnsteig 02,Plate (Meckl),WPLM,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.507024,53.553205,Zubringerbahnhof,ländlicher Zubringer
+d48afc8ec50f,DSA+_Typ2_GL1_WPSW1,4970,04970-01-B01,Bahnsteig 01,Plüschow,WPSW,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.285845,53.837064,Zubringerbahnhof,ländlicher Zubringer
+244cab01fe3f,DSA+_Typ2_GL2_WPI2,5034,05034-01-B04,Bahnsteig 02,Priemerburg,WPI,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.223022,53.795979,Zubringerbahnhof,ländlicher Zubringer
+244cab068dcb,DSA+_Typ2_GL1_WPI1,5034,05034-01-B01,Bahnsteig 01,Priemerburg,WPI,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.223022,53.795979,Zubringerbahnhof,ländlicher Zubringer
+e831cdc25847,DSA+_Typ3_GL1/2_WPRA12,5048,05048-01-B01,Bahnsteig 01/02,Prora,WPRA,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,13.564057,54.444986,Zubringerbahnhof,ländlicher Zubringer
+244cab01a103,DSA+_Typ2_GL1_WPRO1,5049,05049-01-B01,Bahnsteig 01,Prora Ost,WPRO,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,13.574515,54.43006,Zubringerbahnhof,ländlicher Zubringer
+244cab02bddb,DSA+_Typ2_GL1/2_WPOE12,4982,04982-01-B02,Bahnsteig 02,Pölchow,WPOE,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.121127,54.011031,Zubringerbahnhof,ländlicher Zubringer
+244cab06abe7,DSA+_Typ2_GL2_WRMB2,5108,05108-01-B02,Bahnsteig 02,Rambin (Rügen),WRMB,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,13.207813,54.353429,Zubringerbahnhof,ländlicher Zubringer
+244cab05572b,DSA+_Typ2_GL1_WRMB1,5108,05108-01-B01,Bahnsteig 01,Rambin (Rügen),WRMB,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,13.207813,54.353429,Zubringerbahnhof,ländlicher Zubringer
+a0a3b32f9e87,DSA+_Typ2_GL2_WRW2,5127,05127-01-B02,Bahnsteig 02,Rastow,WRW,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.430859,53.458156,Zubringerbahnhof,ländlicher Zubringer
+a0a3b38c53a3,DSA+_Typ2_GL1_WRW1,5127,05127-01-B01,Bahnsteig 01,Rastow,WRW,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.430859,53.458156,Zubringerbahnhof,ländlicher Zubringer
+244cab071093,DSA+_Typ2_GL1_WRA1,5180,05180-01-B01,Bahnsteig 01,Rehna,WRA,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.049747,53.774263,Zubringerbahnhof,ländlicher Zubringer
+244cab044207,DSA+_Typ2_GL2_WRIO2,5264,05264-01-B02,Bahnsteig 02,Ribnitz-Damgarten Ost,WRIO,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.487015,54.251016,Zubringerbahnhof,ländlicher Zubringer
+a0a3b38c5473,DSA+_Typ2_GL1_WRIO1,5264,05264-01-B01,Bahnsteig 01,Ribnitz-Damgarten Ost,WRIO,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.487015,54.251016,Zubringerbahnhof,ländlicher Zubringer
+244cab022a6b,DSA+_Typ2_GL1_WRGT1,5315,05315-01-B01,Bahnsteig 01,Roggentin,WRGT,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.213086,54.073494,Zubringerbahnhof,ländlicher Zubringer
+c45bbe93286f,DSA+_Typ3_GL1/2_WRK12,5368,05368-01-B01,Bahnsteig 01/02,Rostock Kassebohm,WRK,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.163316,54.079425,Zubringerbahnhof,Regionaler Zubringer
+244cab02ea4f,DSA+_Typ2_GL1_WGMS1,4813,04813-01-B01,Bahnsteig 01,Rostock Torfbrücke,WGMS,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.227735,54.241758,Zubringerbahnhof,Regionaler Zubringer
+244cab03a43f,DSA+_Typ2_GL1_WRVE1,8375,08375-01-B01,Bahnsteig 01,Rövershagen Karls Erlebnisdorf (Purkshof),WRVE,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.2383,54.16,Zubringerbahnhof,ländlicher Zubringer
+244cab060337,DSA+_Typ2_GL1_WSAG12,5469,05469-01-B01,Bahnsteig 01,Sagard,WSAG,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,13.564956,54.524379,Zubringerbahnhof,ländlicher Zubringer
+244cab06b913,DSA+_Typ2_GL2/3_WSAM23,5490,05490-01-B02,Bahnsteig 02,Samtens,WSAM,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,13.290177,54.354116,Zubringerbahnhof,ländlicher Zubringer
+244cab067ac7,DSA+_Typ2_GL1_WSAM1,5490,05490-01-B01,Bahnsteig 01,Samtens,WSAM,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,13.290177,54.354116,Zubringerbahnhof,ländlicher Zubringer
+244cab01f2b7,DSA+_Typ2_GL1_WSAN1,5501,05501-01-B01,Bahnsteig 01,Sandhagen (b Bad Doberan),WSAN,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.740909,54.052785,Zubringerbahnhof,ländlicher Zubringer
+244cab0228ef,DSA+_Typ2_GL1_WSTZ1,5506,05506-01-B01,Bahnsteig 01,Sanitz (b Rostock),WSTZ,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.376588,54.07506,Zubringerbahnhof,Regionaler Zubringer
+244cab0237a7,DSA+_Typ2_GL2_WSTZ2,5506,05506-01-B02,Bahnsteig 02,Sanitz (b Rostock),WSTZ,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.376588,54.07506,Zubringerbahnhof,Regionaler Zubringer
+e831cdc2597b,DSA+_Typ2_GL1_WST1,5547,05547-01-B01,Bahnsteig 01,Scharstorf,WST,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.245847,53.970079,Zubringerbahnhof,ländlicher Zubringer
+244cab07105b,DSA+_Typ2_GL2_WST2,5547,05547-01-B02,Bahnsteig 02,Scharstorf,WST,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.245847,53.970079,Zubringerbahnhof,ländlicher Zubringer
+244cab006177,DSA+_Typ2_GL2_WSGN2,5758,05758-01-B02,Bahnsteig 02,Schwerin Görries,WSGN,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.384935,53.609373,Zubringerbahnhof,Regionaler Zubringer
+244cab046a7b,DSA+_Typ2_GL1_WSGN1,5758,05758-01-B01,Bahnsteig 01,Schwerin Görries,WSGN,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.384935,53.609373,Zubringerbahnhof,Regionaler Zubringer
+a0a3b38c538b,DSA+_Typ2_GL1_WSIP1,8372,08372-01-B01,Bahnsteig 01,Schwerin Industriepark,WSIP,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.4315158,53.5752636,Zubringerbahnhof,ländlicher Zubringer
+244cab03803f,DSA+_Typ2_GL2_WSS2,5756,05756-01-B02,Bahnsteig 02,Schwerin Süd,WSS,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.376636,53.574273,Zubringerbahnhof,ländlicher Zubringer
+244cab06259f,DSA+_Typ2_GL1_WSS1,5756,05756-01-B01,Bahnsteig 01,Schwerin Süd,WSS,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.376636,53.574273,Zubringerbahnhof,ländlicher Zubringer
+e831cdc2589b,DSA+_Typ2_GL1_WSL1,5760,05760-01-B01,Bahnsteig 01,Schwerin-Lankow,WSL,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.369536,53.656656,Zubringerbahnhof,Regionaler Zubringer
+e831cdc259a3,DSA+_Typ2_GL1_WSMH1,5761,05761-01-B01,Bahnsteig 01,Schwerin-Margaretenhof,WSMH,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.360973,53.658552,Zubringerbahnhof,Regionaler Zubringer
+3494545a2c67,DSA+_Typ2_GL1_WSWZ1,5759,05759-01-B01,Bahnsteig 01,Schwerin-Warnitz,WSWZ,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.345565,53.6617,Zubringerbahnhof,Regionaler Zubringer
+e831cdc25833,DSA+_Typ2_GL1_WWST1,6961,06961-01-B01,Bahnsteig 01,Schwerin-Wüstmark,WWST,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.399627,53.584045,Zubringerbahnhof,Regionaler Zubringer
+244cab06f80b,DSA+_Typ3_GL1/2_WSRR12,6050,06050-01-B01,Bahnsteig 01,Stralsund Rügendamm,WSRR,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,13.107522,54.305322,Zubringerbahnhof,ländlicher Zubringer
+244cab05d187,DSA+_Typ2_GL1_WSBN1,6093,06093-01-B01,Bahnsteig 01,Subzin-Liessow,WSBN,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.347623,53.891919,Zubringerbahnhof,ländlicher Zubringer
+244cab03a733,DSA+_Typ2_GL2_WSBN2,6093,06093-01-B02,Bahnsteig 02,Subzin-Liessow,WSBN,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.347623,53.891919,Zubringerbahnhof,ländlicher Zubringer
+3494545a2a5b,DSA+_Typ2_GL1_WSU1,6103,06103-01-B01,Bahnsteig 01,Sukow (b Schwerin),WSU,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.559558,53.554785,Zubringerbahnhof,ländlicher Zubringer
+34ab9540699b,DSA+_Typ2_GL1_WTHN1,6172,06172-01-B01,Bahnsteig 01,Teschenhagen,WTHN,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,13.374233,54.389367,Zubringerbahnhof,ländlicher Zubringer
+244cab0704cb,DSA+_Typ2_GL2_WTHN2,6172,06172-01-B02,Bahnsteig 02,Teschenhagen,WTHN,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,13.374233,54.389367,Zubringerbahnhof,ländlicher Zubringer
+e831cdc2595b,DSA+_Typ2_GL1_WTOW1,6173,06173-01-B01,Bahnsteig 01,Teschow,WTOW,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.637959,53.994354,Zubringerbahnhof,ländlicher Zubringer
+244cab065dbb,DSA+_Typ2_GL1_WTI1,6174,06174-01-B01,Bahnsteig 01,Tessin,WTI,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.462614,54.032017,Zubringerbahnhof,ländlicher Zubringer
+3494545a2a77,DSA+_Typ2_GL1_WTIW1,7983,07983-01-B01,Bahnsteig 01,Tessin West,WTIW,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,12.44257,54.034436,Zubringerbahnhof,ländlicher Zubringer
+244cab039cf3,DSA+_Typ2_GL1_WUM1,6309,06309-01-B01,Bahnsteig 01,Ueckermünde,WUM,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,14.05408,53.733923,Zubringerbahnhof,ländlicher Zubringer
+244cab03b9ff,DSA+_Typ2_GL1_WUMH1,8162,08162-01-B01,Bahnsteig 01,Ueckermünde Stadthafen,WUMH,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,14.052233,53.736202,Zubringerbahnhof,ländlicher Zubringer
+244cab06371f,DSA+_Typ2_GL1_WUTZ1,6383,06383-01-B01,Bahnsteig 01,Utzedel,WUTZ,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,13.116222,53.860724,Zubringerbahnhof,ländlicher Zubringer
+a0a3b38c536f,DSA+_Typ2_GL2_WVE2,6407,06407-01-B02,Bahnsteig 02,Ventschow,WVE,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.580016,53.787208,Zubringerbahnhof,ländlicher Zubringer
+244cab00fa6b,DSA+_Typ2_GL1_WVE1,6407,06407-01-B01,Bahnsteig 01,Ventschow,WVE,Mecklenburg-Vorpommern,Ost,Mecklenburg-Vorpommern,11.580016,53.787208,Zubringerbahnhof,ländlicher Zubringer

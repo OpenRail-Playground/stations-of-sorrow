@@ -1,0 +1,222 @@
+/* Calendar Styles */
+.calendar-container {
+  padding: 1rem;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.calendar-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.calendar-nav {
+  display: flex;
+}
+
+.nav-button {
+  background-color: #ec0016;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 1.25rem;
+  margin: 0 0.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.1s ease-in-out;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-button:hover {
+  background-color: #cc0014;
+}
+
+.nav-button:active {
+  transform: scale(0.95);
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  margin-bottom: 1rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.calendar-day-header {
+  text-align: center;
+  font-weight: 600;
+  padding: 0.5rem;
+  background-color: #f0f0f0;
+  font-size: 0.9rem;
+}
+
+.calendar-day {
+  aspect-ratio: 1;
+  padding: 0.5rem;
+  border: 1px solid #e1e1e1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 2.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.calendar-day.empty {
+  background-color: #f9f9f9;
+  border: 1px solid #f0f0f0;
+  cursor: default;
+}
+
+.calendar-day.today {
+  border: 2px solid #ec0016;
+  font-weight: 600;
+}
+
+.calendar-day.holiday {
+  background-color: #ffeaea;
+}
+
+.calendar-day.school-holiday {
+  background-color: #fff5d6;
+}
+
+.calendar-day:not(.empty):hover {
+  background-color: #f0f0f0;
+}
+
+.calendar-day:active {
+  transform: scale(0.97);
+}
+
+.day-number {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.event-indicator {
+  color: #ec0016;
+  font-size: 1.25rem;
+  position: absolute;
+  bottom: 0.25rem;
+}
+
+.calendar-day[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: 10;
+  font-size: 0.85rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.calendar-day[data-tooltip]:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.calendar-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.875rem;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  justify-content: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.legend-marker {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.5rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 3px;
+}
+
+.legend-marker.holiday {
+  background-color: #ffeaea;
+}
+
+.legend-marker.school-holiday {
+  background-color: #fff5d6;
+}
+
+.legend-marker.today {
+  border: 2px solid #ec0016;
+  box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .calendar-day {
+    min-height: 2rem;
+    padding: 0.25rem;
+  }
+  
+  .day-number {
+    font-size: 0.8rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .event-indicator {
+    font-size: 1rem;
+  }
+  
+  .calendar-day-header {
+    padding: 0.25rem;
+    font-size: 0.8rem;
+  }
+  
+  .calendar-header h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Add animation for calendar changes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.calendar-view {
+  animation: fadeIn 0.3s ease-in-out;
+}

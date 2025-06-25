@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stations of Sun</title>
+    <meta name="description" content="Intelligentes Dashboard für Ostsee-Bahnreisen mit Echtzeit-Bahnhofsauslastung">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#EC0016">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Stations of Sun">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/calendar.css">
+</head>
+<body>
+    <div id="app" class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header__content">
+                <img src="icons/sos_v2.png" alt="Stations of Sun Logo" class="header__logo">
+                <h1 class="header__title">Stations of Sun</h1>
+                <button class="header__gps-btn" id="gpsBtn" title="GPS-Position verwenden">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="3,11 22,2 13,21 11,13 3,11"></polygon>
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <input type="text" id="stationSearch" class="search-input" placeholder="Startbahnhof suchen...">
+                <button class="search-clear" id="searchClear">✕</button>
+            </div>
+            <div class="radius-container">
+                <label for="radiusSlider" class="radius-label">Radius: <span id="radiusValue">25</span> km</label>
+                <input type="range" id="radiusSlider" class="radius-slider" min="1" max="50" value="25">
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <!-- Karte Tab -->
+            <div class="tab-content active" id="tab-karte">
+                <div id="map" class="map-container"></div>
+                <div class="map-info" id="mapInfo">
+                    <p>Wählen Sie einen Startpunkt über die Suche oder durch Klick auf die Karte</p>
+                </div>
+            </div>
+
+            <!-- Verbindungen Tab -->
+            <div class="tab-content" id="tab-verbindungen">
+                <div class="connections-container">
+                    <div class="connections-header">
+                        <h2>Aktuelle Verbindungen</h2>
+                        <button class="refresh-btn" id="refreshConnections">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="23 4 23 10 17 10"></polyline>
+                                <polyline points="1 20 1 14 7 14"></polyline>
+                                <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="connectionsList" class="connections-list">
+                        <!-- Verbindungen werden dynamisch eingefügt -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Auslastung Tab -->
+            <div class="tab-content" id="tab-auslastung">
+                <div class="occupancy-container">
+                    <h2>Bahnhofsbelegung</h2>
+                    <div class="occupancy-legend">
+                        <div class="legend-item">
+                            <span class="legend-icon">👤</span>
+                            <span>Niedrige Bahnhofsauslastung</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-icon">👥</span>
+                            <span>Mittlere Bahnhofsauslastung</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-icon">👥👥👥</span>
+                            <span>Hohe Bahnhofsauslastung</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-icon">🚫👥👥👥</span>
+                            <span>Sehr hohe Bahnhofsauslastung</span>
+                        </div>
+                    </div>
+                    <div id="occupancyList" class="occupancy-list">
+                        <!-- Auslastungsliste wird dynamisch eingefügt -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Alternativen Tab -->
+            <div class="tab-content" id="tab-alternativen">
+                <div class="alternatives-container">
+                    <h2>Intelligente Alternativen</h2>
+                    <div id="alternativesInfo" class="alternatives-info">
+                        <p>Definieren Sie einen Startpunkt, um passende Alternativen zu erhalten</p>
+                    </div>
+                    <div id="alternativesList" class="alternatives-list">
+                        <!-- Alternativen werden dynamisch eingefügt -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kalender Tab -->
+            <div class="tab-content" id="tab-kalender">
+                <div class="calendar-container">
+                    <h2>Ferien & Feiertage</h2>
+                    <div id="calendarView" class="calendar-view">
+                        <!-- Kalender wird dynamisch eingefügt -->
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <button class="nav-item active" data-tab="karte">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                    <line x1="8" y1="2" x2="8" y2="18"></line>
+                    <line x1="16" y1="6" x2="16" y2="22"></line>
+                </svg>
+                <span>Karte</span>
+            </button>
+            <button class="nav-item" data-tab="verbindungen">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+                <span>Verbindungen</span>
+            </button>
+            <button class="nav-item" data-tab="auslastung">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                <span>Bahnhofsbelegung</span>
+            </button>
+            <button class="nav-item" data-tab="alternativen">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                <span>Alternativen</span>
+            </button>
+            <button class="nav-item" data-tab="kalender">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                <span>Kalender</span>
+            </button>
+        </nav>
+
+        <!-- Station Detail Modal -->
+        <div id="stationModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modalStationName"></h3>
+                    <button class="modal-close" id="modalClose">✕</button>
+                </div>
+                <div class="modal-body">
+                    <div class="station-occupancy">
+                        <div class="occupancy-display">
+                            <span id="modalOccupancyIcon" class="occupancy-icon"></span>
+                            <div class="occupancy-info">
+                                <span id="modalOccupancyLevel" class="occupancy-level"></span>
+                                <span id="modalOccupancyDesc" class="occupancy-desc"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="station-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Strandentfernung:</span>
+                            <span id="modalBeachDistance"></span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Bahnsteige:</span>
+                            <span id="modalPlatforms"></span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Barrierefrei:</span>
+                            <span id="modalAccessible"></span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Verbindungen:</span>
+                            <span id="modalConnections"></span>
+                        </div>
+                    </div>
+                    <div class="weather-info">
+                        <h4>Wetter & Strandeignung</h4>
+                        <div class="weather-display">
+                            <span id="modalTemp"></span>
+                            <span id="modalCondition"></span>
+                            <span id="modalWind"></span>
+                            <div id="modalBeachSuitability" class="beach-suitability"></div>
+                        </div>
+                    </div>
+                    <div class="departures">
+                        <h4>Nächste Abfahrten</h4>
+                        <div id="modalDepartures" class="departures-list">
+                            <!-- Abfahrten werden dynamisch eingefügt -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+    <script src="services/api.js"></script>
+    <script src="components/Map.js"></script>
+    <script src="components/StationList.js"></script>
+    <script src="components/StationDetail.js"></script>
+    <script src="components/Calendar.js"></script>
+    <script src="app.js"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(registration => {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch(error => {
+                    console.error('Service Worker registration failed:', error);
+                });
+        }
+    </script>
+</body>
+</html>
